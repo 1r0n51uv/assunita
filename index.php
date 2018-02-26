@@ -59,6 +59,9 @@ if (!defined("TESTING")) {
         case 'about':
             include_once VIEW_DIR . "about.php";
             break;
+        case 'registration':
+            include_once VIEW_DIR . "registration.php";
+            break;
 
         //Facebook
         case 'autoload':
@@ -78,7 +81,15 @@ if (!defined("TESTING")) {
         case 'logout':
             include_once CONTROL_DIR . "logout.php";
             break;
-
+        case 'logoutSecond':
+            include_once CONTROL_DIR . "logoutSecond.php";
+            break;
+        case 'regControl':
+            include_once CONTROL_DIR . "registrationControl.php";
+            break;
+        case 'loginControl':
+            include_once CONTROL_DIR . "loginByEmailControl.php";
+            break;
         default:
             include_once VIEW_DIR ."404.php";
             break;

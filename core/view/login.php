@@ -5,7 +5,7 @@
 <body style="background: url(<?php echo STYLE_DIR . 'img/login.jpg'?> )">
 
 
-<?php include 'navbar.php'?>
+<?php include CONTROL_DIR . 'navbarControl.php'?>
 
 
         <div class="modal-dialog">
@@ -17,14 +17,14 @@
                 <div class="modal-body" style="display: flex; align-items: center; justify-content: center;">
 
                     <a href="loginFB">
-                        <button class="btn" style="margin: auto; background-color: #3b5998; border-color: #3b5998; color: white;"><i class="fa fa-facebook"></i>Facebook</button>
+                        <button class="btn" style="margin: auto; background-color: #3b5998; border-color: #3b5998; color: white;"><i class="fab fa-facebook-f"></i> Facebook</button>
                     </a>
 
                     <br>
 
                 </div>
 
-                <form>
+                <form action="loginControl" method="post">
 
                 <div class="modal-body" style="display: flex; align-items: center; justify-content: center;">
 
@@ -38,8 +38,8 @@
 
                         <div class="col-md-8 col-md-offset-2">
                             <div class="input-group">
-                                <input type="email" placeholder="Email" class="form-control" required>
-                                <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                <input type="email" placeholder="Email" class="form-control" name="Email" required>
+                                <span class="input-group-addon"><i class="far fa-envelope-open"></i></span>
                             </div>
                         </div>
 
@@ -53,7 +53,7 @@
 
                         <div class="col-md-8 col-md-offset-2">
                             <div class="input-group">
-                                <input type="password" placeholder="Password" class="form-control" required>
+                                <input type="password" placeholder="Password" class="form-control" name="Pass" required>
                                 <span class="input-group-addon"><i class="fa fa-key"></i></span>
                             </div>
                         </div>
@@ -72,11 +72,13 @@
 
                     <div class="modal-footer">
                     <div class="left-side">
-                        <button type="button" class="btn btn-info btn-simple btn-sm" data-dismiss="modal">Sei nuovo? Registrati</button>
+                        <a href="registration">
+                            <button type="button" class="btn btn-info btn-simple btn-sm" data-dismiss="modal">Sei nuovo? Registrati</button>
+                        </a>
                     </div>
                     <div class="divider"></div>
                     <div class="right-side">
-                        <button type="button" class="btn btn-success btn-simple">Login</button>
+                        <button type="submit" class="btn btn-success btn-simple">Login</button>
                     </div>
                     </form>
                 </div>

@@ -5,7 +5,7 @@
 <body>
 
 
-<?php include 'navbar.php'?>
+<?php include CONTROL_DIR . 'navbarControl.php'?>
 
 <div class="wrapper">
     <div class="demo-header demo-header-image" style="background: url(<?php echo STYLE_DIR . 'img/wall.jpg'?> )">
